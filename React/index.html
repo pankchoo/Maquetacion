@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- permite que se visualice bien en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación para el master en frameworks JS</title>
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- script para simular lista -->
+    <script>
+        window.addEventListener("load", function() {
+            var template = document.getElementById("article-template");
+            var articles = document.getElementById("articles")
+            for(var i = 1; i <=5 ; i++){
+                var clonado = template.cloneNode(true);
+                clonado.removeAttribute("id")
+                var h2 = clonado.getElementsByTagName("h2")[0];
+                h2.innerHTML = h2.textContent + " "+ i;
+                articles.appendChild(clonado);
+            }
+        })
+        
+    </script>
+</head> 
+<body>
+    
+    <!-- cabcecera -->
+    <header id="header">
+        <div class="center">
+        
+            <!-- LOGO -->    
+            <div id="logo">
+                <img src="assets/images/react.svg" alt="app-logo" class="app-logo">
+                <span id="brand">
+                    <strong>Curso</strong>React
+                </span>
+            </div>
+
+            <!-- MENU -->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html"> Inicio </a>
+                    </li>
+                    <li>
+                        <a href="blog.html"> Blog </a>
+                    </li>
+                    <li>
+                        <a href="formulario.html"> Formulario </a>
+                    </li>
+                    <li>
+                        <a href="#"> Pagina 1 </a>
+                    </li>
+                    <li>
+                        <a href="#"> Pagina 2  </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- limpiar floats para que los elementos del contenido de la pagina no se suban NO SE MONTAN ELEMENTOS -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <!-- <h1>Hola</h1> -->
+    <div id="slider" class="slider-big">
+        <h1>Bienvenido al curso de React</h1>
+        <a href="blog.html" class="btn-white">Ir al blog</a>
+    </div>
+
+    <div class="center">
+        <section id ="content">
+
+            <h2 class="subheader">Últimos artículos</h2>
+            <!-- listado articulos -->
+            
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX07+/////o4+MAAACusbR9i5X18PDExMTs5+fx7Oz48/O5tbX9+PjGwsKopKRMSko+PT1SUFCAfX2Wk5N6d3dZWFje2dmNiopmZGQqKyy1uLuWmJs0MzOem5vSzs5NVlwhJShfanGNkJJwcnMiIiK+urpMS0uwrKzY1NQSEhIaGhoPDg5ta2tEQ0NgXl6Ek529b9IVAAAE/klEQVR4nO3db3uaPBQG8IhbBhGt4v+tdc/TabXOuu//7YZraQGJYDicw9x9v+yVZfkViklIourUiZnvu23Jc6QK21j804rxpVW5+OTCoTQplyG10IsrXUeTdiRax63xiIVf4jo3QVuyiVvzpQFh3/faEb8PIYQQSgdCCCGUD4QQvsZkEp56gpuZSLyzXyyFcMwzBKqUn/OAXjiSVmWzCKiFW2lSPj2fWPgUVzAftyRR3JhDQCyMh9BH7bcketjtvjQgzN/6cgnuut0hhBBCKBoIIYRQPhBCCKF8GhMKjS0aEfrbh1ye4zrHc4E8rM5vnfrCR97hekmiM2LwVFPYpjmnU+b5G7XuNQylRWehvoaruOxGSb+Xf4s6nFqTu4h1r+FpLtvolsQM4tZsGxBqrdoRCCGEUD4QQgihfCCEsIrQhPwxnMJwcFxw59g3fEK9a2C8Vx6j2YSmLyL0mIXrJWf2AsJvXznzQ0D4+IkxEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGE/7bw660Lo2+cWQgI+XP7Qp9PqD0J4DpUbEJlZj3+BJpRqLThT2q9ElZ9QQiheCCEEEL5sHzik68A1uVVM66gVVpNiTudU/VWud6tbWW2hk9o6E/5SpofLuxlkgZwCOmHT8kqbhNZiywZr6EyvUlEmUkvab3WY1uhGd/4UNFvR/jYaqBtVRvW0ZNsIIQQQvlACCGEr/9Jc5/45WVYem3jpxFl7sbvvTb/YCkzXXGOLTYUne1MNsnYYmIt8swp7JELk653eLCXYex5az1Z3lNm+SOpXM/ubIV6nKMnHRK/lEjPYlgLsT5LRQMhhBDKB0IIIXz9T6hToWrW2USzyp9lWjOrjw7L2TGpSQLGfqlZEfS1s0mIxn6M6EvIKGzwzczRXiZ5P8UxtvDviYH3yaK1C7fHmHVsYYhPPk49RpStDOe6tpORNlVq5v20EA2EEEIoHwghrCSkXgZdpWpWofH7tPHf2x/uLEVWrKu+ZkTd0Y8ki2UudOoPf/fYYlBhbBEwji1EruGC8RrGf4fE20XSf4eWIpznl/4Lz1LZQAghhPKBEMIG5tpyLaw7H8fziX/NN8oFJgN0nWtl7dNob39Np7OfJv5pn0tY57wvvD8pyjRMCd2/4IzxvcW1wlFGOHQE3rNfw+/Vss8JtX/dF9+/h/FMhTfh51+fK+TXfzmh87iE9x3wH2GlnAtrB0IIIYQQQghvQOi6G4V5R4m70Kwct5302fuljsLwqoFXKpw7SiAsuUunTjcp674nPGkuC2sHQgghbLMw97N5XG53U8KiFGD+VuFLIXB7Q8LCa/hQBGxcaD2BpuQDv3w2cTnI7tDY+oXApoXam7sdRFQ+I/xSDOIWNjir3xahI7DCWV8tETpv5i8/r60lQmVM4JIKu9XbInR8zZ36FbVfWDMQQgghhEzCXm61jXq6NeFgl81pPH9oiZBmpUJRNsTC/6vlbLWJ3ritdle6RDiqCGx8xdCFHRUX876yyiI8VgU2LnQE5naURINsPllGu67C3VVN26ZX7l04r+xysruCimYJCYXK+Kvq8bKrL8PdFf/2I7vsbvWmhVc9EM9W0NZ7lDIJJQMhhBDKB0IIIZQPhBBahZ7jSh/ydMYNCE/f6biftiSj01gqIBZ2XF/6NZVpDWCx0JcmZfNsyIUd80h9Cp179vOwDrDzG4YY4p66gEmmAAAAAElFTkSuQmCC" alt="articulo">
+                    </div>
+                    <h2>Artículo de prueba</h2>
+                    <span class="date">Hace 5 minutos</span>
+                    <a href="">Leer más</a>
+                    <div class="clearfix"></div>
+                </article>
+                <!-- añadir articulos js -->
+            </div>
+
+        </section>
+
+        <!-- sidebar -->
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Puedes hacer esto</h3>
+                <a href="" class="btn btn-success">Crear artículo</a>
+            </div>
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form action="" method="post">
+                    <input type="text" name="search">
+                    <input type="submit" value="Buscar" class="btn">
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- limpiar floats para que los elementos del contenido de la pagina no se suban NO SE MONTAN ELEMENTOS -->
+    <div class="clearfix"></div>
+
+    <footer id="footer">
+        <div class="center">
+            <p> 
+                &copy; Máster en Frameworks de JS de Francisco Toapanta
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
