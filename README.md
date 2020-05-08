@@ -12,7 +12,7 @@ Cómo ingenieros en sistemas es importante conocer este tipo de tecnologías que
 Bien aquí veremos lo básico pues planeo que llevemos un pequeño manual con comandos útiles e instructivos, para creación de cosas en la herramienta que desarrollaremos, pues muchas veces hay cosas que es difícil recordar. 
 
 ## título del comando
->Esto es una cita y lo de abajo código
+>Esto es una cita y lo de ac+a --> código
 `cd 'mis documentos'` 
 
 Cómo se dan cuenta es muy fácil dar formato a nuestro texto y mucho más agradable a la vista leer un instructivo escrito así, ya que se ve tal y como si estuviese hecho en ***HTML***. 
