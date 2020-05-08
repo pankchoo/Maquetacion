@@ -18,7 +18,7 @@ Cómo se dan cuenta es muy fácil dar formato a nuestro texto y mucho más agrad
 
 Los invito a jugar con Markdown y a visualizar el código de este simple instructivo, no creo q necesitamos nada más por ahora les adjunto un tutorial que es completamente gratuito. 
 
-! [Hola](https://i.blogs.es/eaff13/markdown-que-es-1/1366_2000.jpg)
+![ilustracionmarkdown](https://i.blogs.es/eaff13/markdown-que-es-1/1366_2000.jpg)
 
 Tutorial de Markdown:
 
