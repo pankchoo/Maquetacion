@@ -23,3 +23,5 @@ Los invito a jugar con Markdown y a visualizar el código de este simple instruc
 Tutorial de Markdown:
 
 ! [Markdowntutorial.com](http://www.markdowntutorial.com/)
+
+#Esto es un emoji :simple_smile:
